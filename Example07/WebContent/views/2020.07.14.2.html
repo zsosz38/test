@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div style="background-color:blue"><p>첫 번째 자식</p><h1>두 번째 자식</h1><h3>세 번째 자식</h3></div>
+</body>
+<script>
+	let div= document.getElementsByTagName("div")[0];
+	console.log(div.firstChild);//p
+	console.log(div.lastChild);//h3
+ 	console.log(div.lastChild.previousSibling);//h1	
+	console.log(div.childNodes);//p,h1,h3
+ 	console.log(div);//div style="background-color:orange"
+ 	console.log(div.attributes[0].value);
+ 	div.attributes[0].value="background-color:red";
+ 	div.style.backgroundColor="yellow";
+ 	div.style["background-color"]="green";
+ 	div.style="background-color:lavender; border:2px solid purple";
+	div.style="position:absolute;left:100px;top:100px;background-color:lavender; border:2px solid purple"; 
+</script>
+</html>

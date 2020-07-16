@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+<h1>views/2020.07.09.1.html</h1>
+	<button id="move_left">좌로 </button>
+	<button id="move_right">우로 </button>
+	<button id="move_top">위로 </button>
+	<button id="move_bottom">아래로 </button>
+	
+<script>
+	var w1= window.open("https://www.google.com","_blank","height=500,width=500,left=1000,top=0,menubar=1,resizable=no,scrollbars=no",true);
+	var ml= document.getElementById("move_left");
+	var mr= document.getElementById("move_right");
+	var mt= document.getElementById("move_top");
+	var mb= document.getElementById("move_bottom");
+	ml.onclick=function(){
+		w1.moveBy(-10,0);
+	}
+	mr.onclick=function(){
+		w1.moveBy(10,0);
+	}
+	mt.onclick=function(){
+		w1.moveBy(0,-10);
+	}
+	mb.onclick=function(){
+		w1.moveBy(0,10);
+	}
+</script>
+</body>
+
+</html>

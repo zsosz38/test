@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>I'm text</h1>
+</body>
+<script>
+	let h1=document.getElementsByTagName("h1")[0];
+	//h1.firstChild.data="반가워요";
+	h1.firstChild.nodeValue="반가워요";
+	h1.firstChild.aaa="홍길동";
+	//h1.innerText="반가워요"
+	h1.innerText=h1.firstChild.aaa+h1.firstChild.nodeValue;
+</script>
+</html>

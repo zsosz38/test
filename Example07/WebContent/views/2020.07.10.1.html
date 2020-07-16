@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	p{border:2px solid red}
+
+</style>
+</head>
+<body>
+	<h1>윈도우 사이즈 조절 및 위치 오픈</h1>
+	<p>
+	<label>접속할 사이트 주소<input type="text" id="addr"></label>
+	</p>
+	<label>세로사이즈<input type="number" min="0"  step="100" id="hs" value="500"></label>
+	<label>가로사이즈<input type="number" min="0" step="100" id="ws" value="500"></label>
+	<p>
+	<label>세로위치<input type="number" min="0" step="100" id="hp" value="0"></label>
+	<label>가로위치<input type="number" min="0" step="100" id="wp" value="0"></label>
+	</p>
+	<button onclick="openWin()">윈도우창 열기</button>
+	<button onclick="openTab()">탭으로 열기</button>
+</body>
+<script>
+	function openTab(){
+		let addr= document.getElementById("addr");
+		window.open(addr.value);
+	}
+	function openWin(){
+		let addr=document.getElementById("addr");
+		let hs=document.getElementById("hs");
+		let ws=document.getElementById("ws");
+		let hp=document.getElementById("hp");
+		let wp=document.getElementById("wp");
+		let mywin=window
+			.open(addr.value,"_blank","height="+hs.value+", width="+ws.value+", left="+wp.value+", top="+hp.value);
+		//hs,ws,hp,wp 모두 변수이므로 밖으로 빼줘야해서 ""밖으로 빼주고 + 그리고 값(value)을 불러와야 함
+		mywin.onblur=function(){
+			mywin.focus();
+		}
+	}
+	
+</script>
+
+</html>

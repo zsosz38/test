@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	console.log("가로해상도:"+screen.width);
+	console.log("세로해상도:"+screen.height);
+	console.log("화소:"+(screen.width*screen.height));
+	console.log("태스크제외가로해상도:"+screen.availWidth);
+	console.log("태스크제외세로해상도:"+screen.availHeight);
+	
+</script>
+</head>
+<body>
+	<button onclick="openCenter()">창 가운데 열기</button>
+</body>
+<script>
+	console.log(navigator); //클라이언트 정보 안내
+	console.log("쿠키 사용자 정보:"+navigator.cookieEnabled);
+	console.log("웹브라우저:"+navigator.userAgent);
+	console.log("언어권:"+navigator.language);
+	function openCenter(){
+		//window.open(URL, name, specs, replace)
+		let winwidth=200;
+		let winheight=200;
+		let posx=screen.width/2-winwidth/2;
+		let posy=screen.height/2-winheight/2;
+		window.open("http://www.naver.com","_blank",
+				"width="+winwidth+"px,height="+winheight+"px,left="+posx+"px,top="+posy+"px");
+	}
+</script>
+</html>
